@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knappelek</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-columns: repeat(5, 90px);
+        }
+
+        button {
+            background-color: bisque;
+            width: 90px;
+            height: 90px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button>
+    <button onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button> <button onclick="velgKnapp(this)"></button> <button
+        onclick="velgKnapp(this)"></button>
+
+
+    <script>
+        lysOppKnapp();
+        function lysOppKnapp() {
+            let knapper = document.getElementsByTagName('button');
+            let indeks = Math.floor(Math.random() * 25);
+            let knapp = knapper[indeks];
+            knapp.style.backgroundColor = 'yellow';
+        }
+
+        function velgKnapp(knapp) {
+            if (knapp.style.backgroundColor === 'yellow') {
+                knapp.style.backgroundColor = 'bisque';
+                lysOppKnapp();
+            }
+        }
+
+    </script>
+</body>
+
+</html>
